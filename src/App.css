@@ -1,39 +1,105 @@
-.App {
-  text-align: center;
+body {
+  background-color: #405470;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
+#root {
+  background-color: #405470;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+#editorArea, #preview-area {
+  background-color: grey;
+  display: block;
+  justify-content: center;
+  align-items: start;
+  height: 35%;
+  width: 100%;
+  margin: 2%;
+  padding: 0;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+#preview-area {
+  margin-top: 6em;
+  height: fit-content;
+}
+#preview {
+  min-height: 10em;
+  width: 100%;
+  border: 1px solid black;
+  border-top: none;
+  background-color: #c5ced9;
+  box-sizing: border-box;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 1.5em;
+  word-break: break-word;
+}
+#editor {
+  background-color: #c5ced9;
+  height: 100%;
+  width: 100%;
+  border: 1px solid black;
+  border-top: none;
+  resize: none;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-size: 1.5em;
+  word-break: break-word;
+}
+.toolbar {
+  box-sizing: border-box;
+  border: 1px solid black;
+  background-color: #374860;
+  width: 100%;
+  height: 3em;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; 
+  justify-items: center;
+}
+.toolbarText {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+}
+.toolbar-text-wrapper {
+  padding: 0;
+  margin: 0em 0em 0em 1em;
+  height: 100%;
+  display: flex;
+  align-items: center; 
+}
+.toolbar-logo {
+  padding: 0;
+  margin: 0;
+  height: 3em;
+  width: fit-content;
+}
+.App-logo {
+  width: 3em;
+  height: 3em;
+  padding: 0;
+  margin: 0;
+}
+.App {
+  background-color: #405470;
+  display: block;
+  align-items: start;
+  height: 100%;
+  width: 65%;
+  margin: 0;
+  padding: 0;
 }
