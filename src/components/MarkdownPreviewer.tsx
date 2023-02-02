@@ -8,12 +8,16 @@ type Props = {
   input: string[]
 }
 
+marked.setOptions({
+  gfm: true, 
+  breaks: true
+});
+
 export const MarkdownPreviewer: React.FC<Props> = ({ input }) => {
-  console.log(marked.parse(input.join("\n")));
   return (
     <div id="preview-area">
       <Toolbar id="preview" text="Previewer"/>
-      <div id="preview">{parse(marked.parse(input.join("\n")))}</div>
+      <div id="preview">{parse(marked(input.join("\n")))}</div>
     </div>
   );
 }
