@@ -1,5 +1,5 @@
 import * as actionTypes from "./action-types"
-import { initEditor } from "../assests/constants"
+import { initEditor } from "../assets/constants"
 const initialState: EditorInputState = {input: initEditor};
 
 export const reducer = (
