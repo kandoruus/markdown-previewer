@@ -1,6 +1,6 @@
 import * as actionTypes from "./action-types"
-
-const initialState: EditorInputState = {input: ["test","test2s","blah"]};
+import { initEditor } from "../assests/constants"
+const initialState: EditorInputState = {input: initEditor};
 
 export const reducer = (
   state: EditorInputState = initialState,

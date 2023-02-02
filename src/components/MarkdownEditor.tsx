@@ -14,7 +14,7 @@ export const MarkdownEditor: React.FC<Props> = ({ updatePreview, input }) => {
   return (
     <div id="editorArea">
       <Toolbar id="editor" text="Editor"/>
-      <textarea id="editor" onChange={handleText}>{input.join("\n")}</textarea>
+      <textarea id="editor" onChange={handleText} value={input.join("\n")}></textarea>
     </div>
   );
 }
