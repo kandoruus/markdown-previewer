@@ -3,15 +3,17 @@ import '../App.css';
 import { Toolbar } from './Toolbar';
 import { marked } from 'marked';
 import parse from 'html-react-parser';
-import { useSelector } from 'react-redux';
+
+type Props = {
+  input: string[]
+}
 
 marked.setOptions({
   gfm: true, 
   breaks: true
 });
 
-export const MarkdownPreviewer: React.FC = () => {
-  const input: string[] = useSelector((state: EditorInputState) => state.input);
+export const MarkdownPreviewer: React.FC<Props> = ({ input }) => {
   return (
     <div id="preview-area">
       <Toolbar id="preview" text="Previewer"/>

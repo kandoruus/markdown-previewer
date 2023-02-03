@@ -1,15 +1,15 @@
 import React from 'react';
 import '../App.css';
 import { Toolbar } from './Toolbar';
+import { updatePreview } from '../store/actionCreators';
+import { useDispatch, useSelector } from 'react-redux';
 
-type Props = {
-  updatePreview: (text: string[]) => void
-  input: string[]
-}
+export const MarkdownEditor: React.FC = () => {
+  const input: string[] = useSelector((state: EditorInputState) => state.input);
+  const dispatch: DispatchType = useDispatch();
 
-export const MarkdownEditor: React.FC<Props> = ({ updatePreview, input }) => {
   const handleText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    updatePreview(event.target.value.split('\n'));
+    dispatch(updatePreview(event.target.value.split('\n')));
   }
   return (
     <div id="editorArea">
